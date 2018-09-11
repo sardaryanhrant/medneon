@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {HttpClient} from '@angular/common/http';
 import {filter, take} from 'rxjs/operators';
-import {getFromLocalStorage, setToLocalStorage} from '../utils/local-storage';
-import {appConfig} from '../app.config';
+import {getFromLocalStorage, setToLocalStorage} from '../../shared/utils/local-storage';
+import {appConfig} from '../../shared/app.config';
 
 @Injectable()
 export class UserService {

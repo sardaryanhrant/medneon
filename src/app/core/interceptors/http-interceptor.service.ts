@@ -10,8 +10,8 @@ import {
 import {Observable} from 'rxjs/Observable';
 import {tap} from 'rxjs/operators';
 import {Router} from '@angular/router';
-import {appConfig} from '../app.config';
-import {clearLocalStorage, getFromLocalStorage} from '../utils/local-storage';
+import {appConfig} from '../../shared/app.config';
+import {clearLocalStorage, getFromLocalStorage} from '../../shared/utils/local-storage';
 
 @Injectable()
 export class HttpInterceptorService implements HttpInterceptor {
