@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { appConfig } from '../../shared/app.config';
-import { JwtHelperService } from '@auth0/angular-jwt';
+// import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { getFromLocalStorage, setToLocalStorage, removeFromLocalStorage } from '../../shared/utils/local-storage';
 
@@ -56,12 +56,12 @@ export class AuthService {
   }
 
   get isLogged() {
-    const helper = new JwtHelperService();
-    const auth: any = getFromLocalStorage('MEDNEON_AUTH');
-    if (auth && !helper.isTokenExpired(auth.token)) {
-      return true;
-    }
-    removeFromLocalStorage(['GLOBE_AUTH', 'MEDNEON_USER']);
+    // const helper = new JwtHelperService();
+    // const auth: any = getFromLocalStorage('MEDNEON_AUTH');
+    // if (auth && !helper.isTokenExpired(auth.token)) {
+    //   return true;
+    // }
+    // removeFromLocalStorage(['GLOBE_AUTH', 'MEDNEON_USER']);
     return false;
   }
 

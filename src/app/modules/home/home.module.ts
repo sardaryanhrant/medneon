@@ -4,11 +4,15 @@ import {HomeComponent} from './pages/home/home.component';
 import {HomeRoutingModule} from './home-routing.module';
 import { QuestionComponent } from './components/question/question.component';
 import { RegisterComponent } from './components/register/register.component';
+import { MatListModule } from '@angular/material/list';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MatListModule,
+    FlexLayoutModule
   ],
   declarations: [HomeComponent, QuestionComponent, RegisterComponent]
 })
