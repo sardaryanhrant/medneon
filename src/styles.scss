@@ -78,6 +78,37 @@ body{
     margin: 0;
     background: #f6f6f6;
 }
+*{
+    box-sizing: border-box;
+}
 img{
     max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    background: #00b8a6;
+    cursor: pointer;
+    width: 246px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 23px;
+    border: none;
+}
+.padding{
+    padding: 5% 0;
+}   
+.container {
+    width: 1000px;
+    margin: auto;
+    max-width: 100%;
+    padding: 0 16px;
+}
+.text-center{
+    text-align: center;
+}
+sup{
+    font-size: 10px;
 }
