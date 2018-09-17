@@ -9,6 +9,7 @@
 }
 .header .login a{
     text-decoration: none;
+    cursor: pointer;
     color: #3c3c3c;
     font-size: 19px;
     border-left: 1px solid #000;
@@ -22,12 +23,12 @@
     margin: auto;
 }
 .home-top-block h2{
-    font-size: 30px;
+    font-size: 34px;
     color: #ffffff;
 }
 .home-top-block p{
     color:#f9dadb;
-    font-size: 20px;
+    font-size: 25px;
     font-family: LatoLight, sans-serif;
     line-height: 1.4;
 }
@@ -249,6 +250,9 @@
     .blocks-bottom .und-risk,
     .blocks-bottom .join-medneon-block{
         margin: 25px;
+    }
+    .home-top-block p{
+        padding: 0 15px;
     }
 }
 

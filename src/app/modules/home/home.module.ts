@@ -10,7 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatFormFieldModule,
   MatOptionModule,
-  MatInputModule
+  MatInputModule,
+  MatSelectModule,
+  MatDialogModule
 } from '@angular/material';
 
 
@@ -19,14 +21,17 @@ import {
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
+    MatSelectModule,
     HomeRoutingModule,
+    MatDialogModule,
     MatListModule,
     MatFormFieldModule,
     MatOptionModule,
     FlexLayoutModule,
     MatInputModule,
   ],
-  declarations: [HomeComponent, QuestionComponent, RegisterComponent]
+  declarations: [HomeComponent, QuestionComponent, RegisterComponent],
+  entryComponents: [RegisterComponent, QuestionComponent],
 })
 export class HomeModule {
 }

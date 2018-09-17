@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
+export interface DialogData {
+
+}
 
 @Component({
   selector: 'app-question',
@@ -9,7 +14,10 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 export class QuestionComponent implements OnInit {
   messages: FormGroup;
   closeBlock: boolean = true;
-  constructor() { }
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    public dialogRef: MatDialogRef<QuestionComponent>,
+  ) { }
 
   ngOnInit() {
     this.messages = new FormGroup({
@@ -18,9 +26,11 @@ export class QuestionComponent implements OnInit {
       message: new FormControl('')
     });
   }
-  close(){
-    this.closeBlock = !this.closeBlock;    
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
+  
   sendmessage(n){
     console.log(n);    
   }
